@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let alma = 'Alma';
+        let banan = 'Banan';
+        let portagal = 'Portagal';
+
+        let alma_price = 2;
+        let banan_price = 1.5;
+        let portagal_price = 3;
+
+        let alma_count = 10;
+        let banan_count = 20;
+        let portagal_count = 5;
+
+        let Product;
+        let Count;
+
+
+        function Sum_price(miqdar, price) {
+            return miqdar * price
+        }
+
+        do {
+            Product = prompt("Hansi mehsulu isteyirsiniz?")
+            if (Product === 'Alma' || Product === 'Banan' || Product === 'Portagal') {
+
+                while (true) {
+                    Count = prompt("Mehsul miqdarini daxil edin");
+                    if (Product === alma && Count <= alma_count) {
+
+                        console.log(Sum_price(Count, alma_price))
+                        break;
+                    }
+                    else if (Product === banan && Count <= banan_count) {
+
+                        console.log(Sum_price(Count, banan_price))
+                        break;
+                    }
+                    else if (Product === portagal && Count <= portagal_count) {
+
+                        console.log(Sum_price(Count, portagal_price))
+                   break;
+                    }
+                    else { console.log('Kifayet qeder mehsul yoxdur') }
+                    
+                }
+            }
+            else { console.log('Bu mehsul anbarda movcud deyil') }
+
+        } while (true);
+    </script>
+</body>
+
+</html>
